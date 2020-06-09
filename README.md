@@ -1,27 +1,10 @@
-# DSGA1004 - BIG DATA
-## Lab 4: Storage benchmarking
-- Prof Brian McFee (bm106)
-- Weicheng Zhu (wz727)
-- Junge Zhang (jz3502)
-
-*Handout date*: 2020-03-26
-
-*Submission deadline*: 2020-04-08
 
 
-## Requirements
 
-This lab assignment will require the use of Spark on the Dumbo cluster.
-
-As in the previous assignment, remember to activate your environment as follows:
-```
-module load python/gnu/3.6.5
-module load spark/2.4.0
-```
 
 ## Part 0: Introduction
 
-In this assignment, you will be comparing the speed of Spark queries against
+In this project, you will be comparing the speed of Spark queries against
 dataframes backed be either CSV or Parquet file stores.
 
 As reference data, you'll be using a synthetic dataset including names, annual
@@ -142,17 +125,4 @@ There are multiple ways of optimizing parquet structures. Some things you may wa
   - **(Non-trivial)** Adjust configurations of parquet module in Spark.
   
 Each of the three queries may benefit from different types of optimization, so you may want to make multiple copies of each file. Try **at least three** different ways mentioned above and search for the best configurations for each way.
-
-*Hint*: you may want to look through the `explain()` output on each of your queries when choosing optimizations.
-
-## What to turn in
-
-  - The code for all of your queries, stored in `queries.py`
-  - A brief report of your benchmarking results:
-    - Tables of all numerical results (min, max, median) for each query/size/storage combination for part 1, 2 and 3.
-    - How do the results in parts 1, 2, and 3 compare?
-    - What did you try in part 3 to improve performance for each query?
-    - What worked, and what didn't work?
-
-Please save your report in `report.pdf` and include it in the github repository when you submit the assignment.
 
